@@ -1,0 +1,34 @@
+# Konfigurasi untuk Pemindaian dan Crawling URL
+start_url: "https://rupiahtoken.com/id"  # Ganti dengan URL target Anda
+depth: 3  # Kedalaman crawling
+workers: 10  # Jumlah maksimum pekerja untuk pemindaian
+retries: 3  # Jumlah percobaan ulang jika permintaan gagal
+timeout: 5  # Batas waktu untuk permintaan dalam detik
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15"
+urls_file: "urls.txt"  # File yang berisi daftar URL tambahan untuk dipindai
+output_format: "json"  # Format output untuk hasil pemindaian (json, csv, txt)
+output_file: "scan_results"  # Nama file untuk menyimpan hasil tanpa ekstensi
+log_level: "INFO"  # Tingkat logging untuk output
+method: "GET"  # Metode HTTP yang digunakan
+test_parameters:
+  - "id"  # Parameter yang akan diuji
+  - "item"
+  - "user_id"
+test_values: 
+  - "123e4567-e89b-12d3-a456-426614174000"  # Contoh UUID
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+  - "10"
+mflac_endpoints:  # Endpoint yang akan diuji untuk MFLAC
+  - "admin"
+  - "dashboard"
+  - "settings"
